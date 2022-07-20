@@ -35,6 +35,7 @@
 	--normal-font-size: 0.938rem;
 	--small-font-size: 0.813rem;
 	--smaller-font-size: 0.75rem;
+	--minimal-font-size: 0.5rem;
 
 	/*========== Font weight ==========*/
 	--font-medium: 500;
@@ -55,6 +56,19 @@
 	--z-tooltip: 10;
 	--z-fixed: 100;
 	--z-modal: 1000;
+
+
+	/*==========  percentage ==========*/
+	--1: 10%
+	--2: 20%
+	--3:30%
+	--4:40%
+	--5:50%
+	--6:60%
+	--7:70%
+	--8:80%
+	--9:90%
+	--10:100%
 }
 
 /* Font size for large devices */
@@ -67,6 +81,7 @@
 		--normal-font-size: 1rem;
 		--small-font-size: 0.875rem;
 		--smaller-font-size: 0.813rem;
+		--minimal-font-size: 0.55rem;
 	}
 }
 
@@ -436,6 +451,9 @@ img {
 	display: flex;
 	justify-content: center;
 }
+.skill__info {
+	font-size: var(--minimal-font-size);
+}
 
 /*==================== SKILLS ====================*/
 .skills__container {
@@ -504,6 +522,57 @@ img {
 	background-color: var(--first-color);
 }
 
+
+
+.skills__1 {
+	width: 10%;
+}
+
+.skills__2 {
+	width: 20%;
+}
+
+.skills__3 {
+	width: 30%;
+}
+
+.skills__4 {
+	width: 40%;
+}
+
+.skills__5 {
+	width: 50%;
+}
+
+.skills__6 {
+	width: 60%;
+}
+
+.skills__7 {
+	width: 70%;
+}
+
+.skills__8 {
+	width: 80%;
+}
+
+.skills__9 {
+	width: 90%;
+}
+
+.skills__10 {
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
 .skills__html {
 	width: 90%;
 }
@@ -544,9 +613,7 @@ img {
 	width: 40%;
 }
 
-.skills__photoshop {
-	width: 50%;
-}
+
 
 .skills__close .skills__list {
 	height: 0;
