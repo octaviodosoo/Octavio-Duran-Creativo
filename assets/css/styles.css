@@ -81,7 +81,7 @@
 		--normal-font-size: 1rem;
 		--small-font-size: 0.875rem;
 		--smaller-font-size: 0.813rem;
-		--minimal-font-size: 0.55rem;
+		--minimal-font-size: 0.7rem;
 	}
 }
 
@@ -790,6 +790,7 @@ img {
 
 .services__modal-services {
 	display: flex;
+	font-size: var(--minimal-font-size);
 }
 
 .services__modal-title {
