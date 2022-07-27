@@ -344,7 +344,9 @@ img {
 }
 
 .home__scroll {
-	display: none;
+	display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home__scroll-button {
@@ -407,6 +409,11 @@ img {
 .button--flex {
 	display: inline-flex;
 	align-items: center;
+}
+
+.button--center{
+
+
 }
 
 .button--small {
