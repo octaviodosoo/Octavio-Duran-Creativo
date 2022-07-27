@@ -381,6 +381,8 @@ img {
 	font-weight: var(--font-medium);
 }
 
+
+
 .button:hover {
 	background-color: var(--first-color-alt);
 }
@@ -429,7 +431,7 @@ img {
 /*==================== ABOUT ====================*/
 
 .about__img {
-	width: 200px;
+	width: 2s00px;
 	border-radius: 0.5rem;
 	justify-self: center;
 	align-self: center;
@@ -437,6 +439,7 @@ img {
 
 .about__description {
 	text-align: center;
+	font-size: var(--smaller-font-size);
 	margin-bottom: var(--mb-2-5);
 }
 
@@ -845,7 +848,7 @@ img {
 }
 
 .portafolio__img{
-	width: 265px;
+	width: 665px;
 	border-radius: .5rem;
 	justify-self: center;
 }
@@ -857,6 +860,7 @@ img {
 
 .portafolio__description{
 	margin-bottom: var(--mb-0-75);
+	text-align: center;
 
 }
 
@@ -1285,6 +1289,7 @@ img {
 
 	.about__description {
 		text-align: initial;
+
 	}
 
 	.about__info {
@@ -1331,8 +1336,8 @@ img {
 		width: 450px;
 	}
 
-	.portfolio__img {
-		widows: 320px;
+	.portafolio__img {
+		width: 750px;
 	}
 
 	.portfolio__content {
