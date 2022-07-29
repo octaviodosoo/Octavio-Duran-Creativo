@@ -25,14 +25,14 @@
 	--scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
 	/*========== Font and typography ==========*/
-	--body-font: 'Poppins', sans-serif;
+	--body-font: 'Josefin Sans', sans-serif;
 
 	/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
-	--big-font-size: 2rem;
-	--h1-font-size: 1.5rem;
-	--h2-font-size: 1.25rem;
-	--h3-font-size: 1.125rem;
-	--normal-font-size: 0.938rem;
+	--big-font-size: 3rem;
+	--h1-font-size: 1.7rem;
+	--h2-font-size: 1.55rem;
+	--h3-font-size: 1.4rem;
+	--normal-font-size: 1rem;
 	--small-font-size: 0.813rem;
 	--smaller-font-size: 0.75rem;
 	--minimal-font-size: 0.5rem;
@@ -51,6 +51,8 @@
 	--mb-2: 2rem;
 	--mb-2-5: 2.5rem;
 	--mb-3: 3rem;
+	--mb-3-5: 3.5rem;
+
 
 	/*========== z index ==========*/
 	--z-tooltip: 10;
@@ -158,6 +160,11 @@ img {
 /*==================== REUSABLE CSS CLASSES ====================*/
 
 .section {
+	padding: 9rem 0 4rem;
+}
+
+
+.section-b{
 	padding: 2rem 0 4rem;
 }
 
@@ -180,7 +187,7 @@ img {
 .container {
 	max-width: 1080px;
 	margin-left: var(--mb-1-5);
-	margin-right: var(--mb-1-5);
+	margin-right: var(--mb-1-5); 
 }
 
 .grid {
@@ -197,15 +204,10 @@ img {
 	background-color: var(--body-color);
 }
 
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
 /*==================== NAV ====================*/
 
 .nav {
-	max-width: 1088px;
+	max-width: 1080px;
 	height: var(--header-height);
 	display: flex;
 	justify-content: space-between;
@@ -322,12 +324,17 @@ img {
 }
 
 .home__blob {
-	width: 200px;
+	width: 280px;
 	fill: var(--first-color);
 }
 
+.home__scroll{
+	display: none;
+
+}
+
 .home__blob-img {
-	width: 220px;
+	width: 200px;
 }
 
 .home__data {
@@ -418,10 +425,7 @@ img {
 	align-items: center;
 }
 
-.button--center{
 
-
-}
 
 .button--small {
 	padding: 0.75rem 1rem;
@@ -445,7 +449,7 @@ img {
 /*==================== ABOUT ====================*/
 
 .about__img {
-	width: 2s00px;
+	width: 200px;
 	border-radius: 0.5rem;
 	justify-self: center;
 	align-self: center;
@@ -675,7 +679,14 @@ img {
 	margin-right: var(--mb-0-25);
 }
 
-.qualification__data {
+.qualification__data1 {
+	display: grid;
+	grid-template-columns: 2fr max-content 2fr;
+	column-gap: 1.5rem;
+	text-align: right
+}
+
+.qualification__data2 {
 	display: grid;
 	grid-template-columns: 2fr max-content 2fr;
 	column-gap: 1.5rem;
@@ -689,7 +700,6 @@ img {
 .qualification__title2 {
 	font-size: var(--normal-font-size);
 	font-weight: var(--font-medium);
-	text-align: right;
 }
 
 .qualification__subtitle {
@@ -902,18 +912,18 @@ img {
 }
 
 .project__title{
-	font-size: var(--h2-font-size);
-	margin-bottom: var(--mb-0-75);
-}
-
-.project__description{
-	margin-bottom: var(--mb-1-5);
-}
-
-.project__title,
-.project__description{
+	margin-bottom: var(--mb-1);
+	font-size: var(--big-font-size);
 	color: #fff;
 }
+
+
+
+.project__description{
+	margin-bottom: var(--mb-3);
+	color: #fff;
+}
+
 
 .project__img{
 	width: 232px;
@@ -1121,7 +1131,7 @@ img {
 
 /*==================== MEDIA QUERIES ====================*/
 /* For small devices */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 375px) {
 	.container {
 		margin-left: var(--mb-1);
 		margin-right: var(--mb-1);
@@ -1134,13 +1144,29 @@ img {
 	.nav__list {
 		column-gap: 0;
 	}
-
+	
 	.home__content {
 		grid-template-columns: 0.25fr 3fr;
+		padding-top: 0rem;
 	}
 
+	.home__title{
+		margin-bottom: var(--mb-1);
+	}
+
+	.home__subtitle{
+		margin-bottom: var(--mb-2);
+	}
+
+
 	.home__blob {
-		width: 180px;
+		max-width: 280px;
+		width: 200px;
+		fill: var(--first-color);
+	}
+	
+	.home__description{
+		font-size: var(--normal-font-size)
 	}
 
 	.home__scroll section{
@@ -1178,6 +1204,22 @@ img {
 	}
 }
 
+/* CSS dimensions Galaxy a51/71 */
+
+@media screen and (max-width:450){
+
+	.home__title{
+		margin-bottom: var(--mb-1);
+	}
+
+	.home__subtitle{
+		margin-bottom: var(--mb-2);
+	}
+
+}
+	
+
+
 /* For medium devices */
 @media screen and (min-width: 568px) {
 	.home__content {
@@ -1186,11 +1228,26 @@ img {
 
 	.home__data {
 		grid-column: initial;
+
+	}
+
+	.home__blob {
+		max-width: 480px;
+		fill: var(--first-color);
 	}
 
 	.home__img {
 		order: 1;
-		justify-content: center;
+		display: grid;
+		justify-content: end;
+	}
+
+	.home__title{
+		margin-bottom: var(--mb-0-25);
+	}
+
+	.home__subtitle{
+		margin-bottom: var(--mb-2);
 	}
 
 	.about__container,
@@ -1277,11 +1334,27 @@ img {
 
 	.home__content {
 		padding-top: 2.5rem;
-		column-gap: 2rem;
+	}
+
+	.home__data{
+		margin-right: 1.5rem;
+	}
+
+	.home__title{
+		margin-bottom: var(--mb-1);
+	}
+
+	.home__subtitle{
+		margin-bottom: var(--mb-2);
+	}
+
+	.home__description{
+		font-size: var(--smaller-font-size);
 	}
 
 	.home__blob {
-		width: 270px;
+		width: 370px;
+		
 	}
 
 	.home__scroll {
@@ -1384,23 +1457,83 @@ img {
 	.header,
 	.main,
 	.footer__container {
-		padding: 0;
+		padding: 0 1rem;
+	}
+
+	.nav {
+		max-width: 1090PX;
+	}
+
+	.home__container {
+		row-gap: 4rem;
+	}
+
+	.home__social{
+		transform: translateX(0rem);
+	}
+
+	.home__data{
+		margin-right: .5rem;
+	}
+
+	.home__title{
+		margin-bottom: var(--mb-);
+		line-height: 4rem;
+	}
+
+	.home__subtitle{
+		margin-bottom: var(--mb-1-5);
+		font-size: var(--normal-font-size);
+	}
+
+	.home__description{
+		font-size: var(--smaller-font-size);
 	}
 
 	.home__blob {
-		width: 320px;
+		width: 400px;
 	}
 
-	.home__social {
-		transform: translateX(-6rem);
+	.about__section{
+		margin: 0 10rem;
+		margin: 0 var(--mb-3-5);
+		align-items: center;
 	}
+
+	.skills__container{
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.skills__container{
+		column-gap: 5rem
+	}
+
+	.skills__content{
+		margin-bottom: var(--mb-3);
+	}
+
 
 	.services__container {
-		grid-template-columns: repeat(3, 238px);
+		grid-template-columns: repeat(3, 295px);
 	}
 
 	.portfolio__content {
 		column-gap: 5rem;
+	}
+
+	.section__subtitle {
+		margin-bottom: 1rem;
+	}
+
+	.portafolio__data{
+		text-align: center;
+	}
+	.portafolio__description {
+		margin-bottom: var(--mb-3);}
+	
+	.testimonial_content{
+		margin: 0 10rem;
 	}
 
 	.swiper-portfolio-icon {
@@ -1426,10 +1559,20 @@ img {
 	.contact__inputs {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	.qualification__subtitle2 {
-		text-align: right;
+
+	.contact__container{
+		margin: 0 5rem;
 	}
-	.qualification__calendar2 {
-		text-align: right;
+
+	.nav_title{
+		font-size: 1.5rem;
+		margin-bottom: var(--mb-0-75);
+		color: #fff;
 	}
+	
+	.nav_footer_item {
+		color: #fff;
+
+	}
+
 }
