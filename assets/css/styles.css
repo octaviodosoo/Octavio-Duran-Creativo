@@ -937,8 +937,6 @@ img {
 .testimonial__data,
 .testimonial__header{
 	display: flex;
-
-
 }
 
 .testimonial__data{
@@ -1494,6 +1492,10 @@ img {
 		width: 400px;
 	}
 
+	.about__container {
+		margin: 0 3rem ;
+	}
+
 	.about__section{
 		margin: 0 10rem;
 		margin: 0 var(--mb-3-5);
@@ -1515,7 +1517,8 @@ img {
 
 
 	.services__container {
-		grid-template-columns: repeat(3, 295px);
+		grid-template-columns: repeat(3, 318px);
+		justify-content: center;
 	}
 
 	.portfolio__content {
