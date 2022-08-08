@@ -24,9 +24,9 @@ const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction() {
 	const navMenu = document.getElementById('nav-menu');
+	// When we click on each nav__link, we remove the show-menu class
 	navMenu.classList.remove('show-menu');
 }
-
 navLink.forEach((n) => n.addEventListener('click', linkAction));
 
 /*==================== ACCORDION SKILLS ====================*/
@@ -36,10 +36,9 @@ const skillsContent = document.getElementsByClassName('skills__content'),
 function toggleSkills() {
 	let itemClass = this.parentNode.className;
 
-	for (let index = 0; index < skillsContent.length; index++) {
-		skillsContent[index].className = 'skills__content skills__close';
+	for (i = 0; i < skillsContent.length; i++) {
+		skillsContent[i].className = 'skills__content skills__close';
 	}
-
 	if (itemClass === 'skills__content skills__close') {
 		this.parentNode.className = 'skills__content skills__open';
 	}
@@ -60,13 +59,11 @@ tabs.forEach((tab) => {
 		tabContents.forEach((tabContent) => {
 			tabContent.classList.remove('qualification__active');
 		});
-
 		target.classList.add('qualification__active');
 
 		tabs.forEach((tab) => {
 			tab.classList.remove('qualification__active');
 		});
-
 		tab.classList.add('qualification__active');
 	});
 });
@@ -95,7 +92,7 @@ modalCloses.forEach((modalClose) => {
 });
 
 /*==================== PORTFOLIO SWIPER  ====================*/
-let swiperPortafolio = new Swiper('.portafolio__container', {
+let swiperPortfolio = new Swiper('.portfolio__container', {
 	cssMode: true,
 	loop: true,
 
@@ -107,8 +104,6 @@ let swiperPortafolio = new Swiper('.portafolio__container', {
 		el: '.swiper-pagination',
 		clickable: true,
 	},
-	mousewheel: true,
-	keyboard: true,
 });
 
 /*==================== TESTIMONIAL ====================*/
@@ -122,9 +117,9 @@ let swiperTestimonial = new Swiper('.testimonial__container', {
 		clickable: true,
 		dynamicBullets: true,
 	},
-	breakpints: {
+	breakpoints: {
 		568: {
-			slidesPerview: 2,
+			slidesPerView: 2,
 		},
 	},
 });
@@ -152,20 +147,19 @@ window.addEventListener('scroll', scrollActive);
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader() {
 	const nav = document.getElementById('header');
-	// When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
 	if (this.scrollY >= 80) nav.classList.add('scroll-header');
 	else nav.classList.remove('scroll-header');
 }
 window.addEventListener('scroll', scrollHeader);
 
-/*==================== SHOW SCROLL UP ====================*/
-function scrollUp() {
-	const scrollUp = document.getElementById('scroll-up');
+/*==================== SHOW SCROLL TOP ====================*/
+function scrollTop() {
+	let scrollTop = document.getElementById('scroll-top');
 	// When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-	if (this.scrollY >= 560) scrollUp.classList.add('show-scroll');
-	else scrollUp.classList.remove('show-scroll');
+	if (this.scrollY >= 200) scrollTop.classList.add('show-scroll');
+	else scrollTop.classList.remove('show-scroll');
 }
-window.addEventListener('scroll', scrollUp);
+window.addEventListener('scroll', scrollTop);
 
 /*==================== DARK LIGHT THEME ====================*/
 const themeButton = document.getElementById('theme-button');
