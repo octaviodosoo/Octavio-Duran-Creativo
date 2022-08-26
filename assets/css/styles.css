@@ -1,5 +1,5 @@
 /*==================== GOOGLE FONTS ====================*/
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 /*==================== VARIABLES CSS ====================*/
 :root {
 	--header-height: 3rem;
@@ -1084,10 +1084,20 @@ img {
 	}
 	.home__content {
 		grid-template-columns: 0.25fr 3fr;
+		padding-top: 1.5rem;
 	}
 	.home__blob {
-		width: 180px;
+		width: 250px;
 	}
+
+	.home__button {
+		width: 100%;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		font-size: var(--h2-font-size);
+	}
+
 	.skills__title {
 		font-size: var(--normal-font-size);
 	}
@@ -1123,6 +1133,13 @@ img {
 }
 
 /* For medium devices */
+@media screen and (max-width: 425px) {
+	.home__blob {
+		width: 300px;
+	}
+}
+
+/* For medium devices */
 @media screen and (min-width: 568px) {
 	.home__content {
 		grid-template-columns: max-content 1fr 1fr;
@@ -1134,6 +1151,14 @@ img {
 		order: 1;
 		justify-self: center;
 		margin-right: -200px;
+	}
+
+	.home__button {
+		width: 100%;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		font-size: var(--h2-font-size);
 	}
 	.about__container,
 	.skills__container,
